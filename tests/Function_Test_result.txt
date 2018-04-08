@@ -1,0 +1,89 @@
+This is the function testing result log requested from Zach 04/07/2018 11:13PM:
+
+Test case 1. Add user: pass
+
+Test case 2. become a tutor: pass with original bugs. 
+	Descriptions:
+	After click Yes, no window pop out to choose subjects and avialable time. (bug1: need an initial subject in the DB before the become a tutor command. bug2: adding additional subject during become a tutor did not work). these two bugs exists in the original codes.
+
+Test case 3. find a tutor: pass 
+
+	During booking, console log:
+	
+	info: ** API CALL: https://slack.com/api/chat.postMessage
+	info: [End]  0  Task for  U9TBLTYRK in D9TD0P893
+	schedule UA299PSMT
+	UA299PSMT Mon Apr 09 2018 00:00:00 GMT-0400 (EDT) 1200 1230 Monday
+	UA299PSMT Monday Apr 09 2018 1200 1230
+	true 'U9TBLTYRK' 'Apr 09 2018 00:00:00 GMT-0500' 'Monday' '1200' '1230'
+	True
+	Points Adjusted
+	100
+	0
+	Ids are 
+	U9TBLTYRK
+	UA299PSMT
+	0
+	In Update Booking 100
+	sending notification
+	User points updated to :100
+	Tutor points updated to :100
+	Reservation Successful
+
+Test case 4. my reservations: pass
+
+Test case 5: review: fail one and pass one.(possible reason: dates compare)
+	Test without change the dates in DB: Sorry, you don't have any sessions to review for today.
+	
+	Test with change date in DB to today's date first try: Sorry, you don't have any sessions to review for today.
+		console log(around 12:45AM Apr 08 2018):
+		info: ** API CALL: https://slack.com/api/chat.postMessage
+		Dialog Opened sucessful
+		{ type: 'dialog_submission',
+		  submission: { rating: '5', review: 'test with change dates' },
+		  callback_id: 'add_review_dialog',
+		  team: { id: 'T9SJ7KVUY', domain: 'nc-state-zzq' },
+		  user: { id: 'U9TBLTYRK', name: 'zhazhangqi' },
+		  channel: { id: 'D9TD0P893', name: 'directmessage' },
+		  action_ts: '1523162790.658884',
+		  token: 'Au7dh3GIeSIsbGMNp3UsRrwA',
+		  response_url: 'https://hooks.slack.com/app/T9SJ7KVUY/342979433475/zTJBbUDLf0A7XqiKnOm0jle0' }
+		0
+		046
+		{ _id: 5ac99ba2008d524bfb7693eb,
+		  userid: 'U9TBLTYRK',
+		  tutorid: 'UA299PSMT',
+		  date: 'Apr 08 2018 00:00:00 GMT-0500',
+		  day: 'Monday',
+		  from: '1200',
+		  to: '1230',
+		  active: 'yes',
+		  __v: 0 }
+		Different Dates
+	Test with change date in DB to today's date second try: Thank you so much. #GoPack
+		console log(around 01:04AM Apr 08 2018):
+		Dialog Opened sucessful
+		{ type: 'dialog_submission',
+		  submission: { rating: '5', review: 'rrrr' },
+		  callback_id: 'add_review_dialog',
+		  team: { id: 'T9SJ7KVUY', domain: 'nc-state-zzq' },
+		  user: { id: 'U9TBLTYRK', name: 'zhazhangqi' },
+		  channel: { id: 'D9TD0P893', name: 'directmessage' },
+		  action_ts: '1523163840.897010',
+		  token: 'Au7dh3GIeSIsbGMNp3UsRrwA',
+		  response_url: 'https://hooks.slack.com/app/T9SJ7KVUY/343218014309/4c5jGAqiEdGgoMqJ0XWyneR2' }
+		0
+		14
+		{ _id: 5ac99ba2008d524bfb7693eb,
+		  userid: 'U9TBLTYRK',
+		  tutorid: 'UA299PSMT',
+		  date: 'Apr 08 2018 00:00:00 GMT-0500',
+		  day: 'Monday',
+		  from: '1200',
+		  to: '1230',
+		  active: 'yes',
+		  __v: 0 }
+		The payload of the review
+		{ rating: '5', review: 'rrrr' }
+		1 Entry Updated
+
