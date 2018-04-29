@@ -19,7 +19,7 @@ output with the labeled good tutors and computed the accuracy.
 \paragraph{Generate Dataset}
 We need a database which contains a fair mont of user and tutor to work with. 
 Manually adding users and tutors through the slack app interface will be too time-consuming. 
-Instead, we designed and coded a script file in python. This script can automatically generate fix number of user and tutor, along with their random assigned attributes. For example, the user name and user email. But the most important attributes are the ones related to tutor experience and academic performance. These attributes are directly used in the matching and suggestion algorithms. This script can also impute those generated data into Mongo database, to provide test data during the user test and survey.
+Instead, the python script described in section \ref{sec:mock} was used to automatically generate a fixed number of users and tutors, along with their randomly assigned attributes. For the quantitative testing, the most important attributes are the ones related to tutor experience and academic performance - review scores and tutor GPA. These attributes are directly used in the matching and suggestion algorithms.
 
 In this quantitative verification, we used this script to generated 300 users and 300 tutors. Each tutor was assigned a random number of reviews with random rating ranged from 1- 5. Each tutor also was assigned a random academic performance - GPA with a number ranged from 1-5. 
 
