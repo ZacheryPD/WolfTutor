@@ -30,7 +30,7 @@ Instead, the python script described in section \ref{sec:mock} was used to autom
 
 In this quantitative verification, we used that script to generate 300 users and 300 tutors saved into two separated json file. Each tutor was assigned a random number of reviews with random rating ranged from 1- 5. Each tutor also was assigned a random academic performance - GPA with a number ranged from 1-5. 
 
-\paragraph{Test Design and Excution} 
+\paragraph{Test Design and Execution} 
 We designed three major test cases to evaluate the suggestion algorithms. 1) GPA-First: while a user was searching the tutor, they may demand some tutors with high academic performance, here we use GPA as the indicator. In this case, the suggestion algorithms should output a list of tutors which was GPA dominate the order. 2) Rating-First: the same scenario except that user may demand tutors with high tutoring performance, the history rating they got from previous sessions. 3) Default mode: user does not have any preference, but will get a list of suggested tutors with a weighted average score of all kinds of metrics.
 
 We implemented these test cases in Node js, executed along with all other test cases, and saved the recommended lists of tutors of each test cases into JSON files for more quantitive analysis.
