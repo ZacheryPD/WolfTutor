@@ -69,6 +69,11 @@ coll.insert_one(
         )
 ```
 
+----
+
+## Testing
+
+
 #### readDB.py
 Run `python readDB.py` to start main(). This file accesses and reads documents in a mongo database collection. The database was accesses via URI just as for createMock.py: 
   ```
@@ -77,10 +82,6 @@ Run `python readDB.py` to start main(). This file accesses and reads documents i
   URI = os.getenv('MLAB_URI')
   ```
 A list of documents is created with `coll.find()`. The tutors are returned as database objects exactly as they appear in the database.
-
-----
-
-## Testing
 
 #### distribution.py
 Run `python distribution.py` to start main(). This file manually generates a histogram for the frequency of GPAs and average review scores. It creates lists of new users and tutors represented by the defined classes. These classes assign values randomly like the createMock.py file, but not every field used is created as only unique ids, GPAs, and reviews are needed.
