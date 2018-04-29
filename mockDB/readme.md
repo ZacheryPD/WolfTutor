@@ -86,7 +86,7 @@ A list of documents is created with `coll.find()`. The tutors are returned as da
 #### distribution.py
 Run `python distribution.py` to start main(). This file manually generates a histogram for the frequency of GPAs and average review scores. It creates lists of new users and tutors represented by the defined classes. These classes assign values randomly like the createMock.py file, but not every field used is created as only unique ids, GPAs, and reviews are needed.
 
-After histogram creating, the histogram is written to a Microsoft Excel sheet for analyzation. writeToExcel.py requries a string title to name the file, the histogram list of values, and the number of tutors used to create the histogram. The manual histogram was created as follows: 
+After histogram creating, the histogram is written to a Microsoft Excel sheet for analyzation. `writeToExcel.py` requries a string title to name the file, the histogram list of values, and the number of tutors used to create the histogram. The manual histogram was created as follows: 
 ```
 def histogram(bins, data, low, high):
     '''
