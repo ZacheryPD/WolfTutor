@@ -64,7 +64,7 @@ The individual review score is one dimension that offers personalization to
 the reviews.  While it is obviously a good idea to order tutors on the basis
 of their overall review rating, it is also possible that particular tutors
 work well with particular students.  To that end, any system making
-personalized recomendations should take into account the searching student's
+personalized recommendations should take into account the searching student's
 preferences and past experience.  This is what the individual review score
 attribute attempts to do.  This score is the mean review that the current
 student has given to each tutor.  
@@ -104,8 +104,8 @@ to set their own minimum value in the future as the application is deployed to
 meet with existing university policies.
 
 \subsection{Re-weighting}
-One problem that revealed itself with a simple weighted average almost
-immediatly is that a student who performs poorly shows up in the list ahead of a
+One problem that revealed itself with a simple weighted average
+is that a student who performs poorly shows up in the list ahead of a
 new tutor.  After doing some initial testing, the team desired to tackle this
 problem by rescaling the three review scores (overall, individual, and tutor) on
 a scale between -2 and 2.  To do this, a function was implemented that maps
