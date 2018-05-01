@@ -1,18 +1,19 @@
 \subsubsection{Random Data Creation}
+\label{mock-data}
 To evaluate WolfTutor without bias, random mock tutors were 
 created via functions from python's Random library, except for
 tutoring subjects as all tutors could tutor in the four possible subjects,
 names which were generated as User N where N was the number of the 
-user in creation order, and emails similarily being userN@ncsu.edu. Two 
+user in creation order, and emails being userN@ncsu.edu. Two 
 separate databases were created for both the new WolfTutor application
 and the old, to prevent reviewers from automatically looking for a tutor
 they liked when moving from one application to another.
 
 Originally, majors and degree level were chosen randomly, but
-during in person evaluations, many reviwers voiced that they did not
-see what they were looking for. For example, one reviwer specifically wanted
+during in person evaluations, many reviewers voiced that they did not
+see what they were looking for in a tutor. For example, one reviewer specifically wanted
 a Computer Science major with an extremely high GPA but the highest GPAs 
-belonged to other majors. Another reviwer wanted only tutors with master degrees
+belonged to other majors. Another reviwer wanted only tutors with Master degrees
 and felt that they did not have many options. For the second day of 
 evaluations, instead of creating more options, new databases were created such that all majors
 were Computer Science and all degrees were Masters. Adding more options
@@ -52,7 +53,7 @@ in this case as well.
 
 The GPA distribution is discrete uniform as it should be. However, tutor GPA is not
 best represented as uniform because if someone has a very low GPA, they
-likely don't know enough about the subject to tutor it. Students also typically don;t
+likely don't know enough about the subject to tutor it. Students also typically don't
 want a tutor with a bad GPA. Because of this, some GPAs between 1.0 and 2.0 were 
 raised to between 3.0 and 4.0 for day 2 evaluations. 
 
@@ -61,7 +62,7 @@ taking the average of the individual scores given generated as discrete uniform
 distribution. Taking the average created an almost normal distribution. This seemed
 to work well for day 1 evaluations, however, some alterations were made to the day 2
 database to create more competition between the tutors and to avoid 'God' tutors previously
-mentioned.
+mentioned. 
 
 
 
